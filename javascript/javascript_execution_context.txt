@@ -1,0 +1,38 @@
+Javascript Execution Context / CallStack
+
+Global execution Context
+Function execution  Context
+
+let val1 = 10
+let val2 = 15
+function add(num1,num2){
+    let total = num1 + num2;
+    return total
+}
+let result1 = add(val1,val2);
+let result2 = add(10,8)
+
+1) Global execution -> this
+
+2) Memory phase -> variables are allocatted Memory
+val1 = undefined
+val2 = undefined
+add - defination
+result1 = undefined
+result2 = undefined
+
+3) Execution phase
+val1 = 10
+val2 = 15
+add - >  execution thred + new environment variables
+    - > Memory 
+     num1 = undefined
+     num2 = undefined
+     total = undefined
+    - >execution 
+     num1 = 10
+     num2 = 15
+     total = 25
+     destory after execution is completed
+
+Call stack - LIFO
